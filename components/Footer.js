@@ -11,6 +11,7 @@ const Footer = () => (
           size="lg"
           color="gray.500"
           variant="ghost"
+          m={1}
         />
       </Link>
       <Link
@@ -24,6 +25,7 @@ const Footer = () => (
           size="lg"
           color="gray.500"
           variant="ghost"
+          m={1}
         />
       </Link>
       <Link
@@ -37,6 +39,7 @@ const Footer = () => (
           size="lg"
           color="gray.500"
           variant="ghost"
+          m={1}
         />
       </Link>
       <Link href="mailto:m.a.mcguin@gmail.com" title="Email" isExternal>
@@ -46,6 +49,7 @@ const Footer = () => (
           size="lg"
           color="gray.500"
           variant="ghost"
+          m={1}
         />
       </Link>
     </div>
