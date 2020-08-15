@@ -1,0 +1,15 @@
+{
+  "presets": [["next/babel"]],
+  "plugins": [
+    ["import-glob-array"],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@components": "./components"
+        }
+      }
+    ]
+  ]
+}
