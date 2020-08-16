@@ -28,7 +28,7 @@ const Index = () => {
             I’m a programmer, writer, and creator living in New York City. I
             write about things I want to learn more about. Right now that's
             product management. In the future, I hope to write essays on
-            investing, programming, health science, and more.
+            investing, programming, health, and more.
           </Text>
         </Flex>
       </Stack>

@@ -1,6 +1,16 @@
 import React from "react";
-import { Heading, Text, Flex, Stack, Link, Box } from "@chakra-ui/core";
+import {
+  useColorMode,
+  Heading,
+  Text,
+  Flex,
+  Stack,
+  Link,
+  Box,
+} from "@chakra-ui/core";
+import { parseISO, format } from "date-fns";
 
+import { secondaryTextColor } from "../styles/colors";
 import Container from "@components/Container";
 import EssaySEO from "@components/EssaySEO";
 
@@ -9,12 +19,14 @@ const discussUrl = (slug) =>
     `https://michaelmcguiness.com/essays/${slug}`
   )}`;
 
-export default (frontMatter) => {
+const Index = (frontMatter) => {
   const slug = frontMatter.__resourcePath
-    .replace("reports/", "")
+    .replace("essays/", "")
     .replace(".mdx", "");
 
   return ({ children }) => {
+    const colorMode = useColorMode();
+
     return (
       <Container>
         <EssaySEO
@@ -48,6 +60,10 @@ export default (frontMatter) => {
               w="100%"
               mb={4}
             >
+              <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
+                {"Michael McGuiness • "}
+                {format(parseISO(frontMatter.publishedAt), "MMMM dd, yyyy")}
+              </Text>
               <Text fontSize="sm" color="gray.500" minWidth="100px" mt={[2, 0]}>
                 {frontMatter.readingTime.text}
               </Text>
@@ -64,3 +80,5 @@ export default (frontMatter) => {
     );
   };
 };
+
+export default Index;

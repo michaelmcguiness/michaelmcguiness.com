@@ -24,7 +24,7 @@ const EssayCard = (frontMatter) => {
         border="1px solid"
         borderColor={borderColor[colorMode]}
         borderRadius={4}
-        p={2}
+        p={4}
       >
         <Heading size="md" as="h3" fontWeight="medium">
           {title}

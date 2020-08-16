@@ -50,20 +50,22 @@ const Essays = () => {
           justifyContent="center"
           alignItems="flex-start"
           m="0 auto 4rem auto"
+          width="100%"
           maxWidth="700px"
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
+            width="100%"
           >
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               Essays
             </Heading>
             <Text color={secondaryTextColor[colorMode]}>
-              {`I've been writing online since mid-2020, mostly about product management.  In total, I've written ${essays.length} essays on this site.  Use the search below to filter by title.`}
+              {`Use the search below to filter by title.`}
             </Text>
-            <InputGroup my={4} mr={4} w="100%">
+            <InputGroup my={4} mr={4} w="100%" maxWidth="400px">
               <Input
                 aria-label="Search articles"
                 onChange={(e) => setSearchValue(e.target.value)}
@@ -78,7 +80,7 @@ const Essays = () => {
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
-            maxWidth="700px"
+            width="100%"
             mt={8}
           >
             {!filteredEssays.length && "No essays found"}
