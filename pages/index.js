@@ -1,8 +1,10 @@
 import React from "react";
 import { useColorMode, Heading, Text, Flex, Stack } from "@chakra-ui/core";
+
 import { secondaryTextColor } from "../styles/colors";
 
 import Container from "@components/Container";
+import CustomLink from "@components/CustomLink";
 
 const Index = () => {
   const { colorMode } = useColorMode();
@@ -22,13 +24,16 @@ const Index = () => {
           alignItems="flex-start"
         >
           <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            Hi, I’m Mike McGuiness
+            Hi, I’m Mike
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
             I’m a programmer, writer, and creator living in New York City. I
-            write about things I want to learn more about. Right now that's
-            product management. In the future, I hope to write essays on
-            investing, programming, longevity, and more.
+            write <CustomLink href="/essays">essays</CustomLink> on things I
+            want to learn more about. Right now that's product management and
+            entrepreneurship. In the future, I hope to write about investing,
+            computer science, longevity, and more. Follow me on{" "}
+            <CustomLink href="https://twitter.com/m_mcguin">Twitter</CustomLink>{" "}
+            for threads that summarize them.
           </Text>
         </Flex>
       </Stack>

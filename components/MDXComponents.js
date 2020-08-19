@@ -5,14 +5,15 @@ import {
   Code,
   Heading,
   Kbd,
-  Link,
   PseudoBox,
   Text,
   Divider,
   useColorMode,
 } from "@chakra-ui/core";
+
 import { jsx } from "@emotion/core";
-import NextLink from "next/link";
+
+import CustomLink from "@components/CustomLink";
 
 const Table = (props) => (
   <Box as="table" textAlign="left" mt="32px" width="full" {...props} />
@@ -48,27 +49,6 @@ const TData = (props) => (
     {...props}
   />
 );
-
-const CustomLink = (props) => {
-  const { colorMode } = useColorMode();
-  const color = {
-    light: "hsl(208, 99%, 44%)",
-    dark: "hsl(208, 95%, 68%)",
-  };
-
-  const href = props.href;
-  const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
-
-  if (isInternalLink) {
-    return (
-      <NextLink href={href} passHref>
-        <Link color={color[colorMode]} {...props} />
-      </NextLink>
-    );
-  }
-
-  return <Link color={color[colorMode]} isExternal {...props} />;
-};
 
 const Quote = (props) => {
   const { colorMode } = useColorMode();
