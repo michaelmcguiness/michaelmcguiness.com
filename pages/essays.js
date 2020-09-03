@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NextSeo } from "next-seo";
+import React, { useState } from 'react'
+import { NextSeo } from 'next-seo'
 import {
   useColorMode,
   Heading,
@@ -10,21 +10,22 @@ import {
   InputGroup,
   InputRightElement,
   Icon,
-} from "@chakra-ui/core";
+} from '@chakra-ui/core'
 
-import { secondaryTextColor } from "../styles/colors";
-import { frontMatter as essays } from "./essays/**/*.mdx";
+import { secondaryTextColor } from '../styles/colors'
+import { frontMatter as essays } from './essays/**/*.mdx'
 
-import Container from "@components/Container";
-import EssayCard from "@components/EssayCard";
+import Container from '@components/Container'
+import EssayCard from '@components/EssayCard'
+import Subscribe from '@components/Subscribe'
 
-const url = "https://michaelmcguiness.com/essays";
-const title = "Essays - Michael McGuiness";
-const description = "A growing directory of my thoughts on various subjects.";
+const url = 'https://michaelmcguiness.com/essays'
+const title = 'Essays - Michael McGuiness'
+const description = 'A growing directory of my thoughts on various subjects.'
 
 const Essays = () => {
-  const [searchValue, setSearchValue] = useState("");
-  const { colorMode } = useColorMode();
+  const [searchValue, setSearchValue] = useState('')
+  const { colorMode } = useColorMode()
 
   const filteredEssays = essays
     .sort(
@@ -33,7 +34,7 @@ const Essays = () => {
     )
     .filter((frontMatter) =>
       frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
-    );
+    )
 
   return (
     <>
@@ -62,6 +63,7 @@ const Essays = () => {
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               Essays
             </Heading>
+            <Subscribe />
             <Text color={secondaryTextColor[colorMode]}>
               {`Use the search below to filter by title.`}
             </Text>
@@ -81,9 +83,9 @@ const Essays = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
             width="100%"
-            mt={8}
+            mt={4}
           >
-            {!filteredEssays.length && "No essays found"}
+            {!filteredEssays.length && 'No essays found'}
             {filteredEssays.map((frontMatter) => (
               <EssayCard key={frontMatter.title} {...frontMatter} />
             ))}
@@ -91,7 +93,7 @@ const Essays = () => {
         </Stack>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Essays;
+export default Essays
