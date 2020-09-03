@@ -1,10 +1,10 @@
-import React from "react";
-import NextLink from "next/link";
-import { useColorMode, Button, Flex, Box, IconButton } from "@chakra-ui/core";
-import styled from "@emotion/styled";
-import { bgColor, primarytextColor, navBgColor } from "../styles/colors";
+import React from 'react'
+import NextLink from 'next/link'
+import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/core'
+import styled from '@emotion/styled'
+import { bgColor, primarytextColor, navBgColor } from '../styles/colors'
 
-import Footer from "./Footer";
+import Footer from './Footer'
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -12,10 +12,10 @@ const StickyNav = styled(Flex)`
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
   transition: background-color 0.1 ease-in-out;
-`;
+`
 
 const Container = ({ children }) => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <>
@@ -34,12 +34,12 @@ const Container = ({ children }) => {
       >
         <IconButton
           aria-label="Toggle dark mode"
-          icon={colorMode === "dark" ? "sun" : "moon"}
+          icon={colorMode === 'dark' ? 'sun' : 'moon'}
           onClick={toggleColorMode}
         />
         <Box>
           <NextLink href="/essays" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+            <Button as="a" variant="ghost" p={[1, 4]} mr={2}>
               Essays
             </Button>
           </NextLink>
@@ -62,7 +62,7 @@ const Container = ({ children }) => {
         <Footer />
       </Flex>
     </>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container
