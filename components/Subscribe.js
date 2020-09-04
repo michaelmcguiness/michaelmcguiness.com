@@ -4,7 +4,6 @@ import {
   useToast,
   useColorMode,
   Box,
-  InputRightElement,
   Heading,
   Text,
   InputGroup,
@@ -88,12 +87,12 @@ const Subscribe = () => {
             ref={inputEl}
             type="email"
           />
-          <InputRightElement width="6.75rem">
-            <Button fontWeight="bold" h="1.75rem" size="sm" onClick={subscribe}>
-              Subscribe
-            </Button>
-          </InputRightElement>
         </InputGroup>
+        <Box w="100%" textAlign="right" mt={2}>
+          <Button fontWeight="bold" onClick={subscribe}>
+            Subscribe
+          </Button>
+        </Box>
       </form>
     </Box>
   )

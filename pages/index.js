@@ -61,7 +61,6 @@ const Index = () => {
             author={quoteData[quoteIndex].author}
           />
           <Button
-            color="gray"
             onClick={() =>
               setQuoteIndex(Math.floor(Math.random() * quoteData.length))
             }
