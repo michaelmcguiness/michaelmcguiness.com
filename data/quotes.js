@@ -191,4 +191,9 @@ export default [
       "Never ask anyone for their opinion, forecast, or recommendation.  Just ask them what they have--or don't have--in their portfolio.",
     author: 'Nassim Nicholas Taleb',
   },
+  {
+    quote:
+      'Had I been present at the creation, I would have given some useful hints for the better ordering of the universe.',
+    author: 'Alfonso X, "the Wise", of Castille',
+  },
 ]
