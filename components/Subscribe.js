@@ -89,7 +89,7 @@ const Subscribe = () => {
           />
         </InputGroup>
         <Box w="100%" textAlign="right" mt={2}>
-          <Button fontWeight="bold" onClick={subscribe}>
+          <Button variantColor="blue" fontWeight="bold" onClick={subscribe}>
             Subscribe
           </Button>
         </Box>
