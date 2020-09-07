@@ -1,21 +1,12 @@
 import React, { useState } from 'react'
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Box,
-  Button,
-} from '@chakra-ui/core'
+import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core'
 import quoteData from '../data/quotes'
 
-import { blueBgColor, secondaryTextColor } from '../styles/colors'
+import { secondaryTextColor } from '../styles/colors'
 
 import Container from '@components/Container'
 import CustomLink from '@components/CustomLink'
 import Subscribe from '@components/Subscribe'
-import QuoteBox from '@components/QuoteBox'
 
 const Index = () => {
   const { colorMode } = useColorMode()
@@ -51,22 +42,6 @@ const Index = () => {
           </Text>
         </Flex>
         <Subscribe />
-        <Box>
-          <Text letterSpacing="tight" my={4}>
-            Just a random quote I like:
-          </Text>
-          <QuoteBox
-            quote={quoteData[quoteIndex].quote}
-            author={quoteData[quoteIndex].author}
-          />
-          <Button
-            onClick={() =>
-              setQuoteIndex(Math.floor(Math.random() * quoteData.length))
-            }
-          >
-            Generate Another
-          </Button>
-        </Box>
       </Stack>
     </Container>
   )
