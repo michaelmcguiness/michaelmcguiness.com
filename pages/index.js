@@ -34,8 +34,8 @@ const Index = () => {
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
             I write <CustomLink href="/essays">essays</CustomLink> on things I
-            want to learn more about. Right now that's product management and
-            startups. In the future, I hope to write about investing, computer
+            want to learn more about. Right now that's how to build and grow
+            companies. In the future, I hope to write about investing, computer
             science, longevity, and more. Follow me on{' '}
             <CustomLink href="https://twitter.com/m_mcguin">Twitter</CustomLink>{' '}
             for threads that summarize them.
