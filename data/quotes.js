@@ -196,4 +196,8 @@ export default [
       'Had I been present at the creation, I would have given some useful hints for the better ordering of the universe.',
     author: 'Alfonso X, "the Wise", of Castille',
   },
+  {
+    quote: 'The best way to have a good idea is to have lots of ideas.',
+    author: 'Linus Pauling',
+  },
 ]

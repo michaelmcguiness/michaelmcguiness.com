@@ -42,8 +42,7 @@ const Index = () => {
             Hi, I'm Mike
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            I’m a programmer, writer, and creator living in New York City. I
-            write <CustomLink href="/essays">essays</CustomLink> on things I
+            I write <CustomLink href="/essays">essays</CustomLink> on things I
             want to learn more about. Right now that's product management and
             startups. In the future, I hope to write about investing, computer
             science, longevity, and more. Follow me on{' '}
