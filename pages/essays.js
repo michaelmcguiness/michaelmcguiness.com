@@ -82,7 +82,6 @@ const Essays = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
             width="100%"
-            mt={2}
           >
             {!filteredEssays.length && 'No essays found'}
             {filteredEssays.map((frontMatter) => (
