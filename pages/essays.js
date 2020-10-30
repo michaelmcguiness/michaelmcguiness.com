@@ -63,7 +63,6 @@ const Essays = () => {
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               Essays
             </Heading>
-            <Subscribe />
             <Text color={secondaryTextColor[colorMode]}>
               {`Use the search below to filter by title.`}
             </Text>
@@ -90,6 +89,7 @@ const Essays = () => {
               <EssayCard key={frontMatter.title} {...frontMatter} />
             ))}
           </Flex>
+          <Subscribe />
         </Stack>
       </Container>
     </>
