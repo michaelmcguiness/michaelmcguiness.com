@@ -43,7 +43,7 @@ const Index = () => {
             email below. Future essays will likely pertain to company building,
             programming, crypto, investing and technology. You can also follow
             me on{" "}
-            <CustomLink href="https://twitter.com/m_mcguin">Twitter</CustomLink>{" "}
+            <CustomLink href="https://twitter.com/mikemcg0">Twitter</CustomLink>{" "}
             and Commonstock for threads/memos that summarize them.
           </Text>
         </Flex>
