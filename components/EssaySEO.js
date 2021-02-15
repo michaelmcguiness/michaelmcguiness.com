@@ -24,6 +24,11 @@ const EssaySEO = ({ title, summary, publishedAt, url, image }) => {
           description: summary,
           images: [featuredImage],
         }}
+        twitter={{
+          handle: "@mikemcg0",
+          site: "@mikemcg0",
+          cardType: "summary_large_image",
+        }}
       />
       <ArticleJsonLd
         authorName="Michael McGuiness"
