@@ -33,12 +33,18 @@ const Index = () => {
             Hi, I'm Mike
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            I write <CustomLink href="/essays">essays</CustomLink> on things I
-            want to learn more about. Right now that's how to build and grow
-            companies. In the future, I hope to write about investing,
-            programming, and more. Follow me on{" "}
+            I'm an engineer at{" "}
+            <CustomLink href="https://commonstock.com/v2/">
+              Commonstock
+            </CustomLink>
+            , and I write <CustomLink href="/essays">essays</CustomLink> on
+            variety of topics when I can find the time. That's not too often,
+            but if you want to be notified when a new one comes out, enter your
+            email below. Future essays will likely pertain to company building,
+            programming, crypto, investing and technology. You can also follow
+            me on{" "}
             <CustomLink href="https://twitter.com/m_mcguin">Twitter</CustomLink>{" "}
-            for threads that summarize them.
+            and Commonstock for threads/memos that summarize them.
           </Text>
         </Flex>
         <Subscribe />

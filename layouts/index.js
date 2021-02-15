@@ -1,34 +1,35 @@
-import React from 'react'
+import React from "react";
 import {
   useColorMode,
   Heading,
+  Link,
   Text,
   Flex,
   Stack,
-  Link,
   Box,
-} from '@chakra-ui/core'
-import { parseISO, format } from 'date-fns'
+} from "@chakra-ui/core";
+import { parseISO, format } from "date-fns";
 
-import { secondaryTextColor } from '../styles/colors'
-import Container from '@components/Container'
-import EssaySEO from '@components/EssaySEO'
-import Subscribe from '@components/Subscribe'
+import { secondaryTextColor } from "../styles/colors";
+import Container from "@components/Container";
+import CustomLink from "@components/CustomLink";
+import EssaySEO from "@components/EssaySEO";
+import Subscribe from "@components/Subscribe";
 
 const editUrl = (slug) =>
-  `https://github.com/michaelmcguiness/michaelmcguiness.com/edit/master/pages/essays/${slug}.mdx`
+  `https://github.com/michaelmcguiness/michaelmcguiness.com/edit/master/pages/essays/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://michaelmcguiness.com/essays/${slug}`
-  )}`
+  )}`;
 
 const Index = (frontMatter) => {
   const slug = frontMatter.__resourcePath
-    .replace('essays/', '')
-    .replace('.mdx', '')
+    .replace("essays/", "")
+    .replace(".mdx", "");
 
   return ({ children }) => {
-    const colorMode = useColorMode()
+    const colorMode = useColorMode();
 
     return (
       <Container>
@@ -57,15 +58,18 @@ const Index = (frontMatter) => {
             </Heading>
             <Flex
               justify="space-between"
-              align={['initial', 'center']}
-              direction={['column', 'row']}
+              align={["initial", "center"]}
+              direction={["column", "row"]}
               mt={2}
               w="100%"
               mb={4}
             >
               <Text fontSize="sm" color={secondaryTextColor[colorMode]}>
-                {'Michael McGuiness • '}
-                {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+                <CustomLink href="https://twitter.com/mikemcg0" isExternal>
+                  Michael McGuiness
+                </CustomLink>
+                {" • "}
+                {format(parseISO(frontMatter.publishedAt), "MMMM dd, yyyy")}
               </Text>
               <Text fontSize="sm" color="gray.500" minWidth="100px" mt={[2, 0]}>
                 {frontMatter.readingTime.text}
@@ -76,17 +80,17 @@ const Index = (frontMatter) => {
           <Subscribe />
           <Box>
             <Link href={discussUrl(slug)} isExternal>
-              {'Discuss on Twitter'}
+              {"Discuss on Twitter"}
             </Link>
             {` • `}
             <Link href={editUrl(slug)} isExternal>
-              {'Edit on GitHub'}
+              {"Edit on GitHub"}
             </Link>
           </Box>
         </Stack>
       </Container>
-    )
-  }
-}
+    );
+  };
+};
 
-export default Index
+export default Index;
