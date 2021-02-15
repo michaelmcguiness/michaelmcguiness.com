@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { Global, css } from "@emotion/core";
 import { DefaultSeo } from "next-seo";
+import { useRouter } from "next/router";
 import {
   ThemeProvider,
   CSSReset,
@@ -9,6 +10,7 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 
+import * as gtag from "../utils/gtag";
 import theme from "../styles/theme";
 import { prismLightTheme, prismDarkTheme } from "../styles/prism";
 import MDXComponents from "@components/MDXComponents";
@@ -45,6 +47,18 @@ const GlobalStyle = ({ children }) => {
 };
 
 const App = ({ Component, pageProps }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
