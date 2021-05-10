@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/core";
 
 import { secondaryTextColor } from "../styles/colors";
-import { frontMatter as essays } from "./essays/**/*.mdx";
+import { frontMatter as essays } from "./essays/*.mdx";
 
 import Container from "@components/Container";
 import EssayCard from "@components/EssayCard";
