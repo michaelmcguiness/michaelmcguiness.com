@@ -1,20 +1,20 @@
 export default async (req, res) => {
-  const { email } = req.body
+  const { email } = req.body;
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' })
+    return res.status(400).json({ error: "Email is required" });
   }
 
   try {
-    const LIST_ID = process.env.MAILCHIMP_LIST_ID
-    const API_KEY = process.env.MAILCHIMP_API_KEY
+    const LIST_ID = process.env.MAILCHIMP_LIST_ID;
+    const API_KEY = process.env.MAILCHIMP_API_KEY;
     //API keys are in the form <key>-us3.
-    const DATACENTER = API_KEY.split('-')[1]
+    const DATACENTER = API_KEY.split("-")[1];
 
     const data = {
       email_address: email,
-      status: 'pending',
-    }
+      status: "pending",
+    };
 
     const response = await fetch(
       `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`,
@@ -22,20 +22,20 @@ export default async (req, res) => {
         body: JSON.stringify(data),
         headers: {
           Authorization: `apikey ${API_KEY}`,
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        method: 'POST',
+        method: "POST",
       }
-    )
+    );
 
     if (response.status >= 400) {
       return res.status(400).json({
-        error: `There was an error subscribing to the newsletter. Shoot me an email at [m.a.mcguin@gmail.com] and I'll add you to the list.`,
-      })
+        error: `There was an error subscribing to the newsletter. Shoot me an email at [mike@michaelmcguiness.com] and I'll add you to the list.`,
+      });
     }
 
-    return res.status(201).json({ error: '' })
+    return res.status(201).json({ error: "" });
   } catch (error) {
-    return res.status(500).json({ error: error.message || error.toString() })
+    return res.status(500).json({ error: error.message || error.toString() });
   }
-}
+};

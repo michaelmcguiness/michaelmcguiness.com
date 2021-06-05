@@ -42,7 +42,7 @@ const Footer = () => (
           m={1}
         />
       </Link>
-      <Link href="mailto:m.a.mcguin@gmail.com" title="Email" isExternal>
+      <Link href="mailto:mike@michaelmcguiness.com" title="Email" isExternal>
         <IconButton
           aria-label="Email"
           icon="mail"
