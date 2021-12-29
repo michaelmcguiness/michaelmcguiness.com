@@ -33,9 +33,9 @@ const Index = () => {
             Hi, I'm Mike
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            I'm an engineer at{" "}
-            <CustomLink href="https://commonstock.com/v2/">
-              Commonstock
+            I'm co-founder of {" "}
+            <CustomLink href="https://gm.xyz/about">
+              gm.xyz
             </CustomLink>
             , and I write <CustomLink href="/essays">essays</CustomLink> on
             variety of topics when I can find the time. That's not too often,
@@ -44,7 +44,7 @@ const Index = () => {
             programming, crypto, investing and technology. You can also follow
             me on{" "}
             <CustomLink href="https://twitter.com/mikemcg0">Twitter</CustomLink>{" "}
-            and Commonstock for threads/memos that summarize them.
+            for threads that summarize them.
           </Text>
         </Flex>
         <Subscribe />
