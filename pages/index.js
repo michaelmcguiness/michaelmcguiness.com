@@ -34,13 +34,17 @@ const Index = () => {
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
             I'm co-founder of {" "}
-            <CustomLink href="https://gm.xyz/about">
-              gm.xyz
+            <CustomLink href="https://joinperch.com">
+              Perch
             </CustomLink>
-            , and I write <CustomLink href="/essays">essays</CustomLink> on
+            , and creator of {" "}
+            <CustomLink href="https://startups.joinperch.com">
+              The Startup Archive
+            </CustomLink>
+            . I write <CustomLink href="/essays">essays</CustomLink> on
             variety of topics when I can find the time. That's not too often,
             but if you want to be notified when a new one comes out, enter your
-            email below. Future essays will likely pertain to company building,
+            email below. Future essays will likely pertain to startups,
             programming, crypto, investing and technology. You can also follow
             me on{" "}
             <CustomLink href="https://twitter.com/mikemcg0">Twitter</CustomLink>{" "}
